@@ -1,14 +1,15 @@
-<!DOCTYPE html><html lang="ku" dir="rtl"><head><meta charset="UTF-8"><meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1f5135">
+<meta name="description" content="سیستەمی شەجەرەی بنەماڵەی بابان / دارەشمانە">
+<link rel="manifest" href="./manifest.json">
+<title>شەجەرەی بابان / دارەشمانە</title>
 
-«»
-
-<meta name="theme-color" content="#1f5135"><meta name="description" content="سیستەمی شەجەرەی بنەماڵەی بابان / دارەشمانە"><link rel="manifest" href="./manifest.json"><title>شەجەرەی بابان / دارەشمانە</title><style>
-
-*{
-    box-sizing:border-box;
-}
+<style>
+*{box-sizing:border-box;}
 
 body{
     margin:0;
@@ -21,23 +22,16 @@ button,input{
     font-family:Arial,Tahoma,sans-serif;
 }
 
-button{
-    cursor:pointer;
-}
-
-/* HEADER */
+button{cursor:pointer;}
 
 .header{
     background:#1f5135;
     color:white;
     text-align:center;
     padding:25px 15px;
-    position:relative;
 }
 
-.tree-icon{
-    font-size:80px;
-}
+.tree-icon{font-size:80px;}
 
 .title{
     font-size:24px;
@@ -50,8 +44,6 @@ button{
     margin-top:10px;
     line-height:1.8;
 }
-
-/* MAIN */
 
 .main{
     width:94%;
@@ -74,9 +66,7 @@ button{
     text-align:right;
 }
 
-.folder{
-    font-size:38px;
-}
+.folder{font-size:38px;}
 
 .file-name{
     font-size:22px;
@@ -89,8 +79,6 @@ button{
     line-height:1.8;
     margin:15px 0;
 }
-
-/* SEARCH */
 
 .search{
     display:flex;
@@ -125,8 +113,6 @@ button{
     font-size:21px;
 }
 
-/* ACTIONS */
-
 .actions{
     display:flex;
     gap:10px;
@@ -157,11 +143,7 @@ button{
     color:#76591e;
 }
 
-/* PAGES */
-
-.page{
-    display:none;
-}
+.page{display:none;}
 
 .page-title{
     font-size:23px;
@@ -177,8 +159,6 @@ button{
     margin-bottom:20px;
     text-align:center;
 }
-
-/* NUMBERS */
 
 .numbers{
     display:grid;
@@ -199,8 +179,6 @@ button{
 .number:active{
     transform:scale(.97);
 }
-
-/* NAMES */
 
 .name-item{
     margin-bottom:14px;
@@ -239,8 +217,6 @@ button{
     font-weight:bold;
     margin-top:10px;
 }
-
-/* PEOPLE */
 
 .people-title{
     font-size:20px;
@@ -296,8 +272,6 @@ button{
     color:#9b3030;
 }
 
-/* BACK */
-
 .back{
     width:100%;
     height:50px;
@@ -309,8 +283,6 @@ button{
     font-weight:bold;
     margin-top:12px;
 }
-
-/* PASSWORD */
 
 .password-box{
     text-align:center;
@@ -351,8 +323,6 @@ button{
     margin-top:8px;
 }
 
-/* EDIT */
-
 .edit-input{
     width:100%;
     height:52px;
@@ -374,8 +344,6 @@ button{
     font-weight:bold;
 }
 
-/* PRINT CONFIRM */
-
 .print-confirm{
     position:fixed;
     inset:0;
@@ -396,9 +364,7 @@ button{
     text-align:center;
 }
 
-.print-confirm-icon{
-    font-size:55px;
-}
+.print-confirm-icon{font-size:55px;}
 
 .print-confirm-title{
     font-size:22px;
@@ -438,11 +404,7 @@ button{
     color:#37424a;
 }
 
-/* A4 */
-
-#printPage{
-    display:none;
-}
+#printPage{display:none;}
 
 .a4{
     width:210mm;
@@ -520,8 +482,6 @@ button{
     color:#37424a;
 }
 
-/* FOOTER */
-
 .footer{
     padding:25px;
     color:#777;
@@ -529,10 +489,7 @@ button{
     text-align:center;
 }
 
-/* MOBILE */
-
 @media(max-width:600px){
-
     .actions{
         flex-direction:column;
     }
@@ -560,13 +517,9 @@ button{
         width:55px;
         min-width:55px;
     }
-
 }
 
-/* PRINT */
-
 @media print{
-
     body{
         background:white;
     }
@@ -600,304 +553,356 @@ button{
     .print-confirm{
         display:none !important;
     }
-
 }
+</style>
+</head>
 
-</style></head><body><header class="header"><div class="tree-icon">
-    🌳
-</div>
+<body>
 
-<div class="title">
-    شەجەرەی بابان / دارەشمانە
-</div>
+<header class="header">
+    <div class="tree-icon">🌳</div>
 
-<div class="designer">
-    دیزاین و سیستەم / م. ئارام حسین حاجی وەسمان دارەشمانەیی
-</div>
-
-</header><main class="main"><!-- HOME --><div id="homePage" class="page" style="display:block;"><div class="card">
-
-    <div class="file-header">
-
-        <div class="folder">
-            📁
-        </div>
-
-        <div class="file-name">
-            خان بۆداخ
-        </div>
-
-    </div>
-
-    <div class="description">
-        فایلی سەرەکی شەجەرەی بنەماڵە
-    </div>
-
-    <div class="search">
-
-        <input
-            id="searchInput"
-            type="text"
-            placeholder="ناوی سیانی بنووسە و Enter بکە..."
-            autocomplete="off"
-        >
-
-        <button id="searchButton">
-            🔍
-        </button>
-
-    </div>
-
-    <div class="actions">
-
-        <button class="action add" id="mainAdd">
-            ➕ زیادکردنی کەس
-        </button>
-
-        <button class="action save" id="mainSave">
-            💾 سەیڤکردن
-        </button>
-
-        <button class="action print" id="mainPrint">
-            🖨️ پرینت
-        </button>
-
-    </div>
-
-</div>
-
-
-<div class="card" id="mainPeopleCard" style="display:none;">
-
-    <div class="people-title">
-        👥 کەسەکان
-    </div>
-
-    <div class="people-list" id="mainPeopleList"></div>
-
-</div>
-
-</div><!-- NUMBER PAGE --><div id="numberPage" class="page"><div class="card">
-
-    <div class="page-title">
-        👥 زیادکردنی کەس
-    </div>
-
-    <div class="page-text">
-        چەند کەس دەتەوێت زیاد بکەیت؟
-    </div>
-
-    <div class="numbers">
-
-        <button class="number" data-count="1">1</button>
-        <button class="number" data-count="2">2</button>
-        <button class="number" data-count="3">3</button>
-        <button class="number" data-count="4">4</button>
-        <button class="number" data-count="5">5</button>
-        <button class="number" data-count="6">6</button>
-
-    </div>
-
-    <button class="back" id="numberBack">
-        ◀️ گەڕانەوە
-    </button>
-
-</div>
-
-</div><!-- NAMES PAGE --><div id="namesPage" class="page"><div class="card">
-
-    <div class="page-title">
-        👤 ناوی کەسەکان
-    </div>
-
-    <div class="page-text">
-        ناوی کەسەکان بنووسە
-    </div>
-
-    <div id="namesContainer"></div>
-
-    <button class="save-names" id="saveNames">
-        💾 سەیڤکردن
-    </button>
-
-    <button class="back" id="namesBack">
-        ◀️ گەڕانەوە
-    </button>
-
-</div>
-
-</div><!-- PERSON PAGE --><div id="personPage" class="page"><div class="card">
-
-    <div class="file-header">
-
-        <div class="folder">
-            👤
-        </div>
-
-        <div class="file-name" id="selectedPersonName"></div>
-
-    </div>
-
-    <div class="description">
-        کەسانی ئەم کەسە
-    </div>
-
-    <div class="actions">
-
-        <button class="action add" id="personAdd">
-            ➕ زیادکردنی کەس
-        </button>
-
-        <button class="action save" id="personSave">
-            💾 سەیڤکردن
-        </button>
-
-    </div>
-
-</div>
-
-
-<div class="card" id="personPeopleCard" style="display:none;">
-
-    <div class="people-title">
-        👥 کەسان
-    </div>
-
-    <div class="people-list" id="personPeopleList"></div>
-
-</div>
-
-
-<button class="back" id="personBack">
-    ◀️ گەڕانەوە
-</button>
-
-</div><!-- PASSWORD PAGE --><div id="passwordPage" class="page"><div class="card password-box">
-
-    <div class="page-title">
-        🔐 پاسۆرد
-    </div>
-
-    <div class="page-text">
-        بۆ ئەم کارە پاسۆردەکە بنووسە
-    </div>
-
-    <input
-        type="password"
-        id="passwordInput"
-        placeholder="پاسۆرد"
-        autocomplete="off"
-    >
-
-    <button class="password-ok" id="passwordOk">
-        ✓ پشتڕاستکردنەوە
-    </button>
-
-    <button class="password-cancel" id="passwordCancel">
-        ✕ هەڵوەشاندنەوە
-    </button>
-
-</div>
-
-</div><!-- EDIT PAGE --><div id="editPage" class="page"><div class="card">
-
-    <div class="page-title">
-        ✏️ دەستکاریکردنی ناو
-    </div>
-
-    <div class="page-text">
-        ناوی نوێ بنووسە
-    </div>
-
-    <input
-        class="edit-input"
-        id="editInput"
-        type="text"
-        placeholder="ناوی نوێ"
-        autocomplete="off"
-    >
-
-    <button class="edit-save" id="editSave">
-        💾 سەیڤکردنی گۆڕانکاری
-    </button>
-
-    <button class="back" id="editCancel">
-        ◀️ هەڵوەشاندنەوە
-    </button>
-
-</div>
-
-</div><!-- PRINT PAGE --><div id="printPage"><div class="a4">
-
-    <div class="a4-title">
+    <div class="title">
         شەجەرەی بابان / دارەشمانە
     </div>
 
-    <div class="a4-subtitle">
-        زنجیرەی بنەماڵەی کەسەکە
+    <div class="designer">
+        دیزاین و سیستەم / م. ئارام حسین حاجی وەسمان دارەشمانەیی
+    </div>
+</header>
+
+<main class="main">
+
+<div id="homePage" class="page" style="display:block;">
+
+    <div class="card">
+
+        <div class="file-header">
+            <div class="folder">📁</div>
+
+            <div class="file-name">
+                خان بۆداخ
+            </div>
+        </div>
+
+        <div class="description">
+            فایلی سەرەکی شەجەرەی بنەماڵە
+        </div>
+
+        <div class="search">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="ناوی سیانی بنووسە و Enter بکە..."
+                autocomplete="off"
+            >
+
+            <button id="searchButton">
+                🔍
+            </button>
+
+        </div>
+
+        <div class="actions">
+
+            <button class="action add" id="mainAdd">
+                ➕ زیادکردنی کەس
+            </button>
+
+            <button class="action save" id="mainSave">
+                💾 سەیڤکردن
+            </button>
+
+            <button class="action print" id="mainPrint">
+                🖨️ پرینت
+            </button>
+
+        </div>
+
     </div>
 
-    <div class="family-line" id="familyLine"></div>
+    <div class="card" id="mainPeopleCard" style="display:none;">
+
+        <div class="people-title">
+            👥 کەسەکان
+        </div>
+
+        <div class="people-list" id="mainPeopleList"></div>
+
+    </div>
 
 </div>
 
 
-<div class="a4-buttons">
+<div id="numberPage" class="page">
 
-    <button class="a4-button a4-print" id="a4Print">
-        🖨️ چاپکردنی A4
-    </button>
+    <div class="card">
 
-    <button class="a4-button a4-back" id="a4Back">
+        <div class="page-title">
+            👥 زیادکردنی کەس
+        </div>
+
+        <div class="page-text">
+            چەند کەس دەتەوێت زیاد بکەیت؟
+        </div>
+
+        <div class="numbers">
+
+            <button class="number" data-count="1">1</button>
+            <button class="number" data-count="2">2</button>
+            <button class="number" data-count="3">3</button>
+            <button class="number" data-count="4">4</button>
+            <button class="number" data-count="5">5</button>
+            <button class="number" data-count="6">6</button>
+
+        </div>
+
+        <button class="back" id="numberBack">
+            ◀️ گەڕانەوە
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="namesPage" class="page">
+
+    <div class="card">
+
+        <div class="page-title">
+            👤 ناوی کەسەکان
+        </div>
+
+        <div class="page-text">
+            ناوی کەسەکان بنووسە
+        </div>
+
+        <div id="namesContainer"></div>
+
+        <button class="save-names" id="saveNames">
+            💾 سەیڤکردن
+        </button>
+
+        <button class="back" id="namesBack">
+            ◀️ گەڕانەوە
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="personPage" class="page">
+
+    <div class="card">
+
+        <div class="file-header">
+
+            <div class="folder">
+                👤
+            </div>
+
+            <div class="file-name" id="selectedPersonName"></div>
+
+        </div>
+
+        <div class="description">
+            کەسانی ئەم کەسە
+        </div>
+
+        <div class="actions">
+
+            <button class="action add" id="personAdd">
+                ➕ زیادکردنی کەس
+            </button>
+
+            <button class="action save" id="personSave">
+                💾 سەیڤکردن
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="card" id="personPeopleCard" style="display:none;">
+
+        <div class="people-title">
+            👥 کەسان
+        </div>
+
+        <div class="people-list" id="personPeopleList"></div>
+
+    </div>
+
+    <button class="back" id="personBack">
         ◀️ گەڕانەوە
     </button>
 
 </div>
 
-</div></main><footer class="footer">
-    شەجەرەی بابان / دارەشمانە
-</footer><!-- PRINT CONFIRM --><div class="print-confirm" id="printConfirm"><div class="print-confirm-box">
 
-    <div class="print-confirm-icon">
-        🖨️
-    </div>
+<div id="passwordPage" class="page">
 
-    <div class="print-confirm-title">
-        دڵنیایت؟
-    </div>
+    <div class="card password-box">
 
-    <div class="print-confirm-text">
-        دڵنیایت دەتەوێت ئەم زنجیرەی بنەماڵەیە چاپ بکەیت؟
-    </div>
+        <div class="page-title">
+            🔐 پاسۆرد
+        </div>
 
-    <div class="print-confirm-buttons">
+        <div class="page-text">
+            بۆ ئەم کارە پاسۆردەکە بنووسە
+        </div>
 
-        <button class="confirm-yes" id="confirmYes">
-            ✓ بەڵێ، چاپ بکە
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="پاسۆرد"
+            autocomplete="off"
+        >
+
+        <button class="password-ok" id="passwordOk">
+            ✓ پشتڕاستکردنەوە
         </button>
 
-        <button class="confirm-no" id="confirmNo">
-            ✕ نەخێر
+        <button class="password-cancel" id="passwordCancel">
+            ✕ هەڵوەشاندنەوە
         </button>
 
     </div>
 
 </div>
 
-</div><script>
 
-/* ==================================================
-   FAMILY SYSTEM
-================================================== */
+<div id="editPage" class="page">
+
+    <div class="card">
+
+        <div class="page-title">
+            ✏️ دەستکاریکردنی ناو
+        </div>
+
+        <div class="page-text">
+            ناوی نوێ بنووسە
+        </div>
+
+        <input
+            class="edit-input"
+            id="editInput"
+            type="text"
+            placeholder="ناوی نوێ"
+            autocomplete="off"
+        >
+
+        <button class="edit-save" id="editSave">
+            💾 سەیڤکردنی گۆڕانکاری
+        </button>
+
+        <button class="back" id="editCancel">
+            ◀️ هەڵوەشاندنەوە
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="printPage">
+
+    <div class="a4">
+
+        <div class="a4-title">
+            شەجەرەی بابان / دارەشمانە
+        </div>
+
+        <div class="a4-subtitle">
+            زنجیرەی بنەماڵەی کەسەکە
+        </div>
+
+        <div class="family-line" id="familyLine"></div>
+
+    </div>
+
+    <div class="a4-buttons">
+
+        <button class="a4-button a4-print" id="a4Print">
+            🖨️ چاپکردنی A4
+        </button>
+
+        <button class="a4-button a4-back" id="a4Back">
+            ◀️ گەڕانەوە
+        </button>
+
+    </div>
+
+</div>
+
+</main>
+
+<footer class="footer">
+    شەجەرەی بابان / دارەشمانە
+</footer>
+
+
+<div class="print-confirm" id="printConfirm">
+
+    <div class="print-confirm-box">
+
+        <div class="print-confirm-icon">
+            🖨️
+        </div>
+
+        <div class="print-confirm-title">
+            دڵنیایت؟
+        </div>
+
+        <div class="print-confirm-text">
+            دڵنیایت دەتەوێت ئەم زنجیرەی بنەماڵەیە چاپ بکەیت؟
+        </div>
+
+        <div class="print-confirm-buttons">
+
+            <button class="confirm-yes" id="confirmYes">
+                ✓ بەڵێ، چاپ بکە
+            </button>
+
+            <button class="confirm-no" id="confirmNo">
+                ✕ نەخێر
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
 
 const ROOT_ID = "root_khan_bodakh";
 
 let familyData = null;
+let currentPersonId = ROOT_ID;
+
+let pendingAction = null;
+let pendingPersonId = null;
+let previousPage = null;
+
+/*
+==================================================
+قفلەکەی زیادکردن
+تەنها لە ناو ئەم Session ـەدا ڕێگە دەدات
+==================================================
+*/
+let addAuthorized = false;
 
 
-/* ==================================================
-   LOAD DATA
-================================================== */
+/*
+==================================================
+LOAD DATA
+==================================================
+*/
 
 function loadFamily(){
 
@@ -918,9 +923,7 @@ function loadFamily(){
             ){
 
                 return parsed;
-
             }
-
         }
 
     }catch(error){
@@ -929,9 +932,7 @@ function loadFamily(){
             "کێشە لە خوێندنەوەی داتا:",
             error
         );
-
     }
-
 
     return {
 
@@ -940,11 +941,8 @@ function loadFamily(){
             [ROOT_ID]:{
 
                 id:ROOT_ID,
-
                 name:"خان بۆداخ",
-
                 parentId:null,
-
                 children:[]
 
             }
@@ -952,25 +950,16 @@ function loadFamily(){
         }
 
     };
-
 }
-
 
 familyData = loadFamily();
 
 
-let currentPersonId = ROOT_ID;
-
-let pendingAction = null;
-
-let pendingPersonId = null;
-
-let previousPage = null;
-
-
-/* ==================================================
-   ELEMENTS
-================================================== */
+/*
+==================================================
+ELEMENTS
+==================================================
+*/
 
 const homePage =
     document.getElementById("homePage");
@@ -1024,9 +1013,11 @@ const printConfirm =
     document.getElementById("printConfirm");
 
 
-/* ==================================================
-   CREATE ID
-================================================== */
+/*
+==================================================
+CREATE ID
+==================================================
+*/
 
 function createId(){
 
@@ -1040,9 +1031,11 @@ function createId(){
 }
 
 
-/* ==================================================
-   SAVE
-================================================== */
+/*
+==================================================
+SAVE
+==================================================
+*/
 
 function saveFamily(){
 
@@ -1067,42 +1060,38 @@ function saveFamily(){
         );
 
         return false;
-
     }
 
 }
 
 
-/* ==================================================
-   SHOW PAGE
-================================================== */
+/*
+==================================================
+SHOW PAGE
+==================================================
+*/
 
 function showPage(page){
 
     homePage.style.display = "none";
-
     numberPage.style.display = "none";
-
     namesPage.style.display = "none";
-
     personPage.style.display = "none";
-
     passwordPage.style.display = "none";
-
     editPage.style.display = "none";
-
     printPage.style.display = "none";
 
     page.style.display = "block";
 
     window.scrollTo(0,0);
-
 }
 
 
-/* ==================================================
-   GET PERSON
-================================================== */
+/*
+==================================================
+GET PERSON
+==================================================
+*/
 
 function getPerson(id){
 
@@ -1111,29 +1100,24 @@ function getPerson(id){
 }
 
 
-/* ==================================================
-   CREATE PERSON
-================================================== */
+/*
+==================================================
+CREATE PERSON
+==================================================
+*/
 
-function createPerson(
-    name,
-    parentId
-){
+function createPerson(name,parentId){
 
     const id = createId();
 
     familyData.people[id] = {
 
         id:id,
-
         name:name,
-
         parentId:parentId,
-
         children:[]
 
     };
-
 
     if(parentId){
 
@@ -1151,18 +1135,17 @@ function createPerson(
             parent.children.push(id);
 
         }
-
     }
 
-
     return id;
-
 }
 
 
-/* ==================================================
-   MAIN PEOPLE
-================================================== */
+/*
+==================================================
+MAIN PEOPLE
+==================================================
+*/
 
 function renderMainPeople(){
 
@@ -1170,7 +1153,6 @@ function renderMainPeople(){
 
     const root =
         getPerson(ROOT_ID);
-
 
     if(
         !root ||
@@ -1181,12 +1163,9 @@ function renderMainPeople(){
         mainPeopleCard.style.display = "none";
 
         return;
-
     }
 
-
     mainPeopleCard.style.display = "block";
-
 
     root.children.forEach(
         function(id){
@@ -1198,29 +1177,23 @@ function renderMainPeople(){
 
         }
     );
-
 }
 
 
-/* ==================================================
-   PERSON ROW
-================================================== */
+/*
+==================================================
+PERSON ROW
+==================================================
+*/
 
-function createPersonRow(
-    container,
-    personId
-){
+function createPersonRow(container,personId){
 
     const person =
         getPerson(personId);
 
-
     if(!person){
-
         return;
-
     }
-
 
     const row =
         document.createElement("div");
@@ -1237,7 +1210,6 @@ function createPersonRow(
 
     personButton.textContent =
         "👤 " + person.name;
-
 
     personButton.onclick =
         function(){
@@ -1258,7 +1230,6 @@ function createPersonRow(
 
     editButton.title =
         "دەستکاری";
-
 
     editButton.onclick =
         function(event){
@@ -1285,7 +1256,6 @@ function createPersonRow(
     deleteButton.title =
         "سڕینەوە";
 
-
     deleteButton.onclick =
         function(event){
 
@@ -1300,60 +1270,52 @@ function createPersonRow(
 
 
     row.appendChild(personButton);
-
     row.appendChild(editButton);
-
     row.appendChild(deleteButton);
 
     container.appendChild(row);
-
 }
 
 
-/* ==================================================
-   OPEN PERSON
-================================================== */
+/*
+==================================================
+OPEN PERSON
+==================================================
+*/
 
 function openPerson(personId){
 
     const person =
         getPerson(personId);
 
-
     if(!person){
-
         return;
-
     }
-
 
     currentPersonId =
         personId;
 
-
     selectedPersonName.textContent =
         person.name;
-
 
     renderPersonPeople();
 
     showPage(personPage);
-
 }
 
 
-/* ==================================================
-   PERSON CHILDREN
-================================================== */
+/*
+==================================================
+PERSON CHILDREN
+==================================================
+*/
 
 function renderPersonPeople(){
 
     personPeopleList.innerHTML = "";
 
-
     const person =
         getPerson(currentPersonId);
-
 
     if(
         !person ||
@@ -1364,12 +1326,9 @@ function renderPersonPeople(){
         personPeopleCard.style.display = "none";
 
         return;
-
     }
 
-
     personPeopleCard.style.display = "block";
-
 
     person.children.forEach(
         function(id){
@@ -1381,13 +1340,15 @@ function renderPersonPeople(){
 
         }
     );
-
 }
 
 
-/* ==================================================
-   MAIN ADD
-================================================== */
+/*
+==================================================
+ADD BUTTON - MAIN
+پاسۆرد پێش هەموو شتێک
+==================================================
+*/
 
 document
 .getElementById("mainAdd")
@@ -1395,18 +1356,26 @@ document
     "click",
     function(){
 
+        addAuthorized = false;
+
         currentPersonId =
             ROOT_ID;
 
-        showPage(numberPage);
+        requestPassword(
+            "add",
+            ROOT_ID
+        );
 
     }
 );
 
 
-/* ==================================================
-   PERSON ADD
-================================================== */
+/*
+==================================================
+ADD BUTTON - PERSON
+پاسۆرد پێش هەموو شتێک
+==================================================
+*/
 
 document
 .getElementById("personAdd")
@@ -1414,15 +1383,23 @@ document
     "click",
     function(){
 
-        showPage(numberPage);
+        addAuthorized = false;
+
+        requestPassword(
+            "add",
+            currentPersonId
+        );
 
     }
 );
 
 
-/* ==================================================
-   NUMBER SELECT
-================================================== */
+/*
+==================================================
+NUMBER BUTTONS
+بەبێ پاسۆرد هەرگیز کار ناکەن
+==================================================
+*/
 
 document
 .querySelectorAll(".number")
@@ -1432,6 +1409,21 @@ document
         button.addEventListener(
             "click",
             function(){
+
+                if(addAuthorized !== true){
+
+                    alert(
+                        "🔐 سەرەتا پاسۆرد بنووسە."
+                    );
+
+                    requestPassword(
+                        "add",
+                        currentPersonId
+                    );
+
+                    return;
+                }
+
 
                 const count =
                     Number(
@@ -1465,7 +1457,8 @@ document
                     const input =
                         document.createElement("input");
 
-                    input.type = "text";
+                    input.type =
+                        "text";
 
                     input.className =
                         "person-name";
@@ -1481,11 +1474,9 @@ document
 
 
                     item.appendChild(label);
-
                     item.appendChild(input);
 
                     namesContainer.appendChild(item);
-
                 }
 
 
@@ -1517,15 +1508,37 @@ document
 );
 
 
-/* ==================================================
-   SAVE NAMES
-================================================== */
+/*
+==================================================
+SAVE NAMES
+==================================================
+*/
 
 document
 .getElementById("saveNames")
 .addEventListener(
     "click",
     function(){
+
+        /*
+        ئەگەر پاسۆرد پشتڕاست نەکرابێتەوە
+        هیچ ناوێک زیاد ناکرێت
+        */
+
+        if(addAuthorized !== true){
+
+            alert(
+                "🔐 دەستگەیشتن بە زیادکردنی کەس نییە."
+            );
+
+            requestPassword(
+                "add",
+                currentPersonId
+            );
+
+            return;
+        }
+
 
         const inputs =
             namesContainer.querySelectorAll(
@@ -1541,7 +1554,6 @@ document
 
                 const name =
                     input.value.trim();
-
 
                 if(name !== ""){
 
@@ -1560,13 +1572,11 @@ document
             );
 
             return;
-
         }
 
 
         const parent =
             getPerson(currentPersonId);
-
 
         if(!parent){
 
@@ -1575,7 +1585,6 @@ document
             );
 
             return;
-
         }
 
 
@@ -1598,9 +1607,14 @@ document
         }
 
 
-        if(
-            currentPersonId === ROOT_ID
-        ){
+        /*
+        دوای سەیڤ قفل دەکرێتەوە
+        */
+
+        addAuthorized = false;
+
+
+        if(currentPersonId === ROOT_ID){
 
             renderMainPeople();
 
@@ -1623,15 +1637,14 @@ document
 );
 
 
-/* ==================================================
-   PASSWORD
-   PASSWORD = 1981
-================================================== */
+/*
+==================================================
+PASSWORD
+PASSWORD = 1981
+==================================================
+*/
 
-function requestPassword(
-    action,
-    personId
-){
+function requestPassword(action,personId){
 
     pendingAction =
         action;
@@ -1639,12 +1652,10 @@ function requestPassword(
     pendingPersonId =
         personId;
 
-
     previousPage =
         currentPersonId === ROOT_ID
         ? homePage
         : personPage;
-
 
     passwordInput.value = "";
 
@@ -1659,9 +1670,14 @@ function requestPassword(
         },
         100
     );
-
 }
 
+
+/*
+==================================================
+PASSWORD OK
+==================================================
+*/
 
 document
 .getElementById("passwordOk")
@@ -1670,7 +1686,7 @@ document
     function(){
 
         const password =
-            passwordInput.value;
+            passwordInput.value.trim();
 
 
         if(password !== "1981"){
@@ -1684,26 +1700,55 @@ document
             passwordInput.focus();
 
             return;
-
         }
 
+
+        /*
+        ADD
+        */
+
+        if(pendingAction === "add"){
+
+            addAuthorized = true;
+
+            showPage(numberPage);
+
+            return;
+        }
+
+
+        /*
+        EDIT
+        */
 
         if(pendingAction === "edit"){
 
             openEditPage();
 
+            return;
         }
 
+
+        /*
+        DELETE
+        */
 
         if(pendingAction === "delete"){
 
             deletePerson();
 
+            return;
         }
 
     }
 );
 
+
+/*
+==================================================
+ENTER PASSWORD
+==================================================
+*/
 
 passwordInput.addEventListener(
     "keydown",
@@ -1723,11 +1768,22 @@ passwordInput.addEventListener(
 );
 
 
+/*
+==================================================
+PASSWORD CANCEL
+==================================================
+*/
+
 document
 .getElementById("passwordCancel")
 .addEventListener(
     "click",
     function(){
+
+        addAuthorized = false;
+
+        pendingAction = null;
+        pendingPersonId = null;
 
         showPage(previousPage);
 
@@ -1735,26 +1791,23 @@ document
 );
 
 
-/* ==================================================
-   EDIT
-================================================== */
+/*
+==================================================
+EDIT
+==================================================
+*/
 
 function openEditPage(){
 
     const person =
         getPerson(pendingPersonId);
 
-
     if(!person){
-
         return;
-
     }
-
 
     editInput.value =
         person.name;
-
 
     showPage(editPage);
 
@@ -1763,13 +1816,11 @@ function openEditPage(){
         function(){
 
             editInput.focus();
-
             editInput.select();
 
         },
         100
     );
-
 }
 
 
@@ -1792,18 +1843,14 @@ document
             editInput.focus();
 
             return;
-
         }
 
 
         const person =
             getPerson(pendingPersonId);
 
-
         if(!person){
-
             return;
-
         }
 
 
@@ -1812,14 +1859,11 @@ document
 
 
         if(!saveFamily()){
-
             return;
-
         }
 
 
         renderMainPeople();
-
         renderPersonPeople();
 
 
@@ -1854,22 +1898,22 @@ document
 );
 
 
-/* ==================================================
-   DELETE
-================================================== */
+/*
+==================================================
+DELETE
+==================================================
+*/
 
 function deletePerson(){
 
     const person =
         getPerson(pendingPersonId);
 
-
     if(!person){
 
         showPage(previousPage);
 
         return;
-
     }
 
 
@@ -1882,7 +1926,6 @@ function deletePerson(){
         showPage(previousPage);
 
         return;
-
     }
 
 
@@ -1899,7 +1942,6 @@ function deletePerson(){
         showPage(previousPage);
 
         return;
-
     }
 
 
@@ -1911,11 +1953,8 @@ function deletePerson(){
         const p =
             getPerson(id);
 
-
         if(!p){
-
             return;
-
         }
 
 
@@ -1969,9 +2008,7 @@ function deletePerson(){
 
     saveFamily();
 
-
     renderMainPeople();
-
     renderPersonPeople();
 
 
@@ -1990,15 +2027,16 @@ function deletePerson(){
 
 
     alert(
-        "✅ کەسەکە و پەیوەندییەکانی سڕانەوە."
+        "✅ کەسەکە و پەیوەندییەکانی سڕینەوە."
     );
-
 }
 
 
-/* ==================================================
-   BACK NUMBER
-================================================== */
+/*
+==================================================
+BACK NUMBER
+==================================================
+*/
 
 document
 .getElementById("numberBack")
@@ -2006,6 +2044,8 @@ document
     "click",
     function(){
 
+        addAuthorized = false;
+
         if(currentPersonId === ROOT_ID){
 
             showPage(homePage);
@@ -2020,9 +2060,11 @@ document
 );
 
 
-/* ==================================================
-   BACK NAMES
-================================================== */
+/*
+==================================================
+BACK NAMES
+==================================================
+*/
 
 document
 .getElementById("namesBack")
@@ -2030,6 +2072,8 @@ document
     "click",
     function(){
 
+        addAuthorized = false;
+
         if(currentPersonId === ROOT_ID){
 
             showPage(homePage);
@@ -2044,9 +2088,11 @@ document
 );
 
 
-/* ==================================================
-   PERSON BACK
-================================================== */
+/*
+==================================================
+PERSON BACK
+==================================================
+*/
 
 document
 .getElementById("personBack")
@@ -2063,7 +2109,6 @@ document
             showPage(homePage);
 
             return;
-
         }
 
 
@@ -2072,7 +2117,6 @@ document
             showPage(homePage);
 
             return;
-
         }
 
 
@@ -2088,7 +2132,6 @@ document
             showPage(homePage);
 
             return;
-
         }
 
 
@@ -2117,9 +2160,11 @@ document
 );
 
 
-/* ==================================================
-   SAVE BUTTONS
-================================================== */
+/*
+==================================================
+SAVE BUTTONS
+==================================================
+*/
 
 document
 .getElementById("mainSave")
@@ -2157,9 +2202,11 @@ document
 );
 
 
-/* ==================================================
-   ANCESTRY
-================================================== */
+/*
+==================================================
+ANCESTRY
+==================================================
+*/
 
 function buildAncestry(personId){
 
@@ -2185,9 +2232,7 @@ function buildAncestry(personId){
 
 
         if(!person){
-
             break;
-
         }
 
 
@@ -2195,9 +2240,7 @@ function buildAncestry(personId){
 
 
         if(currentId === ROOT_ID){
-
             break;
-
         }
 
 
@@ -2208,13 +2251,14 @@ function buildAncestry(personId){
 
 
     return ancestry;
-
 }
 
 
-/* ==================================================
-   A4
-================================================== */
+/*
+==================================================
+A4
+==================================================
+*/
 
 function showAncestryOnA4(personId){
 
@@ -2232,7 +2276,6 @@ function showAncestryOnA4(personId){
         );
 
         return;
-
     }
 
 
@@ -2248,7 +2291,6 @@ function showAncestryOnA4(personId){
             box.textContent =
                 person.name;
 
-
             familyLine.appendChild(box);
 
 
@@ -2263,7 +2305,6 @@ function showAncestryOnA4(personId){
                 arrow.textContent =
                     "↓";
 
-
                 familyLine.appendChild(arrow);
 
             }
@@ -2273,13 +2314,14 @@ function showAncestryOnA4(personId){
 
 
     showPage(printPage);
-
 }
 
 
-/* ==================================================
-   SEARCH
-================================================== */
+/*
+==================================================
+SEARCH
+==================================================
+*/
 
 function doSearch(){
 
@@ -2300,7 +2342,6 @@ function doSearch(){
         input.focus();
 
         return;
-
     }
 
 
@@ -2336,7 +2377,6 @@ function doSearch(){
         );
 
         return;
-
     }
 
 
@@ -2347,7 +2387,6 @@ function doSearch(){
         );
 
         return;
-
     }
 
 
@@ -2359,7 +2398,6 @@ function doSearch(){
 
             const heading =
                 document.createElement("div");
-
 
             heading.style.fontSize =
                 "20px";
@@ -2375,10 +2413,8 @@ function doSearch(){
                 ? "0"
                 : "30px";
 
-
             heading.textContent =
                 "👤 " + person.name;
-
 
             familyLine.appendChild(heading);
 
@@ -2399,7 +2435,6 @@ function doSearch(){
                     box.textContent =
                         p.name;
 
-
                     familyLine.appendChild(box);
 
 
@@ -2414,7 +2449,6 @@ function doSearch(){
                         arrow.textContent =
                             "↓";
 
-
                         familyLine.appendChild(arrow);
 
                     }
@@ -2427,13 +2461,14 @@ function doSearch(){
 
 
     showPage(printPage);
-
 }
 
 
-/* ==================================================
-   SEARCH BUTTON
-================================================== */
+/*
+==================================================
+SEARCH BUTTON
+==================================================
+*/
 
 document
 .getElementById("searchButton")
@@ -2447,9 +2482,11 @@ document
 );
 
 
-/* ==================================================
-   SEARCH ENTER
-================================================== */
+/*
+==================================================
+SEARCH ENTER
+==================================================
+*/
 
 document
 .getElementById("searchInput")
@@ -2469,9 +2506,11 @@ document
 );
 
 
-/* ==================================================
-   MAIN PRINT
-================================================== */
+/*
+==================================================
+MAIN PRINT
+==================================================
+*/
 
 document
 .getElementById("mainPrint")
@@ -2492,7 +2531,6 @@ document
             searchInput.focus();
 
             return;
-
         }
 
 
@@ -2502,9 +2540,11 @@ document
 );
 
 
-/* ==================================================
-   PRINT CONFIRM
-================================================== */
+/*
+==================================================
+PRINT CONFIRM
+==================================================
+*/
 
 function showPrintConfirmation(){
 
@@ -2580,16 +2620,20 @@ document
 );
 
 
-/* ==================================================
-   START
-================================================== */
+/*
+==================================================
+START
+==================================================
+*/
 
 renderMainPeople();
 
 
-/* ==================================================
-   SERVICE WORKER / PWA
-================================================== */
+/*
+==================================================
+SERVICE WORKER
+==================================================
+*/
 
 if("serviceWorker" in navigator){
 
@@ -2624,4 +2668,7 @@ if("serviceWorker" in navigator){
 
 }
 
-</script></body></html>
+</script>
+
+</body>
+</html>
